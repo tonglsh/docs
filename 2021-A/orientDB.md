@@ -1,5 +1,7 @@
 # orientDB
 
+## 初始化
+
 连接控制台
 
 下载二进制包 
@@ -149,9 +151,7 @@ CREATE EDGE Connect FROM #74:0 TO #90:0 SET createdAt = '2021-2-3 13:00:00'
 
 
 
-
-
-## Supported Data Types
+Supported Data Types 
 
 OrientDB supports several data types natively. Below is the complete table.
 
@@ -181,3 +181,7 @@ OrientDB supports several data types natively. Below is the complete table.
 | 21   | Decimal       | DECIMAL      | Decimal numbers without rounding                             | `java.math.BigDecimal`           | ? ?                           | Any Number, String      |
 | 22   | LinkBag       | LINKBAG      | List of [Record ID](http://orientdb.com/docs/3.1.x/datamodeling/Concepts.html#record-id)s as spec [RidBag](http://orientdb.com/docs/3.1.x/internals/RidBag.html) | `ORidBag`                        | ? ?                           | -                       |
 | 23   | Any           | ANY          | Not determinated type, used to specify Collections of mixed type, and null | -                                | -                             | -                       |
+
+## SQL查询
+
+If you are looking for the most efficient way to traverse a graph, we suggest to use the [SQL-Match](http://www.orientdb.org/docs/3.0.x/sql/SQL-Match.html) instead.

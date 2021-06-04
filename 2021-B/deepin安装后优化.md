@@ -18,3 +18,17 @@ maven官方下，配置文件替换成backup的
 
 在官网下的谷歌浏览器可能会有其他依赖需要手动安装下。
 
+
+
+## npm run serve 时打印错误
+
+```
+Error from chokidar (/home/tonglsh/WebstormProjects/cloud-web/src/pages/system/views): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/tonglsh/WebstormProjects/cloud-web/src/pages/system/views/index.vue'
+```
+
+解决方案:
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
