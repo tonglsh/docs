@@ -185,3 +185,11 @@ OrientDB supports several data types natively. Below is the complete table.
 ## SQL查询
 
 If you are looking for the most efficient way to traverse a graph, we suggest to use the [SQL-Match](http://www.orientdb.org/docs/3.0.x/sql/SQL-Match.html) instead.
+
+
+
+
+
+
+
+- **links**: A link is a pointer to a document in the database
