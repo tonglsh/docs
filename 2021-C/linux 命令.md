@@ -9,6 +9,29 @@ export http_proxy=192.168.10.238:58591
 检查
 curl cip.cc
 ```
+
+Linux系统代理配置相关环境变量：
+
+* http_proxy：为 http 设置代理；默认不填开头以 http 协议传输。
+* https_proxy：为 https 设置代理。
+* ftp_proxy：为 ftp 设置代理。
+* all_proxy：全部变量设置代理（设置了此变量，其余变量不需设置）。
+* no_proxy 无需配置代理的主机或域名（可以使用通配符，多个主机使用“,”号分隔）。
+
+设置系统代理配置环境变量：
+
+* export http_proxy=server:port
+* export https_proxy=user:password@server:port
+* export ftp_proxy=socks5://server:port
+* export no_proxy=”localhost, 127.0.0.1, ::1″
+
+取消代理配置：
+
+* unset http_proxy
+* unset https_proxy
+* unset ftp_proxy
+* unset no_proxy
+
 2. proxychains
 ```
 apt install proxychains
